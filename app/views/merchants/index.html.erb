@@ -1,0 +1,19 @@
+<html>
+<head>
+  <style>
+    ul { list-style-type: none; padding: 0; }
+    li { margin: 10px; padding: 10px; border: 1px solid #ccc; background-color: #f5f5f5; }
+    h1 { background-color: #333; color: #fff; padding: 10px; }
+  </style>
+</head>
+<body>
+  <section class='all_merchants'>
+    <h1>All Merchants</h1>
+    <ul>
+      <% @merchants.each do |merchant| %>
+        <li>Merchant Name: <%= link_to merchant.name, merchant_path(merchant.id) %></li>
+      <% end %>
+    </ul>
+  </section>
+</body>
+</html>

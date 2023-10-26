@@ -1,0 +1,19 @@
+<html>
+<head>
+  <style>
+    ul { list-style-type: none; padding: 0; }
+    li { margin: 10px; padding: 10px; border: 1px solid #ccc; background-color: #f5f5f5; }
+    h1 { background-color: #333; color: #fff; padding: 10px; }
+  </style>
+</head>
+<body>
+  <section class='all_items'>
+    <h1>All Items</h1>
+    <ul>
+      <% @items.each do |item| %>
+        <li>Item Name: <%= link_to item.name, item_path(item.id) %></li>
+      <% end %>
+    </ul>
+  </section>
+</body>
+</html>
